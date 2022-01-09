@@ -690,14 +690,27 @@ const sajuList = [
   // },
 ];
 
+const announcement = [
+  "건강 유의하시고 좋은 하루 보내세요.",
+  "남은 시간 기운 내시고 즐거운 하루 보내세요!",
+  "소중한 하루 멋지게 보내시기 바랍니다.",
+  "식사는 든든하게 하셨나요?",
+  "춥지만 건강한 하루 보내시기 바랍니다.",
+  "맛있는 음식 드시고, 행복한 시간 보내며 건강 챙기는 하루 보내세요.",
+  "오늘도 건승하시기 바랍니다.",
+];
+
 // DOM
 const cardList = document.getElementById("articles-container");
+const announcementDiv = document.getElementById("announcement");
 
 // function
 
 // 방문자 카운트
-
 function onLoad() {
+  // let RandomAnnounceNum = Math.floor(Math.random() * announcement.length);
+  // announcementDiv.innerText = "📌" + announcement[RandomAnnounceNum];
+
   for (let i = 0; i < sajuList.length; i++) {
     const imgUrl = sajuList[i]["img_url"];
     const title = sajuList[i]["title"];
@@ -718,7 +731,7 @@ function onLoad() {
     for (let j = 0; j < serviceList.length; j++) {
       pTags += `<p class="s${j} service-tag">#${serviceList[j]}</p>`;
       if (j == 8) {
-        console.log(title);
+        // console.log(title);
         break;
       }
     }
